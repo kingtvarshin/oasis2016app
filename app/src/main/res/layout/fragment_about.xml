@@ -21,8 +21,7 @@
         card_view:cardCornerRadius="8dp"
         android:transitionGroup="false"
         android:elevation="10dp"
-        tools:alpha="0.4"
-        tools:cardBackgroundColor="#ffffff">
+        android:background="#00000000">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -42,7 +41,7 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="@string/aboutdesc"
-                android:id="@+id/textViewevent"
+                android:id="@+id/textViewabout"
                 android:layout_gravity="center_horizontal"
                 android:gravity="center"
                 android:background="#00ffffff"
