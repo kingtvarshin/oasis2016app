@@ -24,6 +24,7 @@ import com.kingtvarshin.oasis2016new.fragments.Frament_contactus;
 import com.kingtvarshin.oasis2016new.fragments.Frament_developers;
 import com.kingtvarshin.oasis2016new.fragments.Frament_events;
 import com.kingtvarshin.oasis2016new.fragments.Frament_blog;
+import com.kingtvarshin.oasis2016new.fragments.Frament_howtoreach;
 import com.kingtvarshin.oasis2016new.fragments.Frament_intro;
 import com.kingtvarshin.oasis2016new.fragments.Frament_payment;
 import com.kingtvarshin.oasis2016new.fragments.Frament_register;
@@ -155,6 +156,10 @@ public class MainActivity extends AppCompatActivity
             }}  else if (id == R.id.nav_sponsors) {
             setTitle("Sponsors");
             fragment = new Frament_sponsors();
+            fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
+        } else if (id == R.id.nav_howtoreach) {
+            setTitle("How To Reach");
+            fragment = new Frament_howtoreach();
             fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
         } else if (id == R.id.nav_contactus) {
             setTitle("Contact Us");

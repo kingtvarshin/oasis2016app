@@ -32,17 +32,21 @@
             android:icon="@drawable/map"
             android:title="@string/map" />
         <item
+            android:id="@+id/nav_howtoreach"
+            android:icon="@drawable/map"
+            android:title="@string/howtoreach" />
+        <item
             android:id="@+id/nav_sponsors"
             android:icon="@drawable/ic_menu_manage"
-            android:title="Sponsors" />
+            android:title="@string/sponsors" />
         <item
             android:id="@+id/nav_contactus"
             android:icon="@drawable/ic_menu_manage"
-            android:title="Contact Us" />
+            android:title="@string/contact_us" />
         <item
             android:id="@+id/nav_developers"
             android:icon="@drawable/ic_menu_manage"
-            android:title="Developers" />
+            android:title="@string/developers" />
 
     </group>
 
