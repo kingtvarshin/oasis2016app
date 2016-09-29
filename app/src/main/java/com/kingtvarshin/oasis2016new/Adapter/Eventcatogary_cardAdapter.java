@@ -13,6 +13,8 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
+import static com.kingtvarshin.oasis2016new.R.id.card;
+
 /**
  * Created by lenovo on 05-09-2016.
  */
@@ -38,6 +40,7 @@ public class Eventcatogary_cardAdapter extends RecyclerView.Adapter<Eventcatogar
         viewHolder.tv_Eventcatogary.setText(eventcatogary.get(i));
 //        viewHolder.tv_Eventicon.setText(eventicon.get(i));
         Picasso.with(viewHolder.tv_Eventicon.getContext()).load(eventicon.get(i)).into(viewHolder.tv_Eventicon);
+        viewHolder.card.setAlpha(.6f);
 //        if(i<=4){
 //        viewHolder.card.setCardBackgroundColor(Color.BLUE);}
 //        else if(i>=5)

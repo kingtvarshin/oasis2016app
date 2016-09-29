@@ -27,7 +27,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="title"
+            android:text="@string/title"
             android:id="@+id/textViewevent"
             android:layout_gravity="center_horizontal" />
 
@@ -35,7 +35,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="text"
+            android:text="@string/text"
             android:id="@+id/textViewdesc"
             android:padding="5dp"
             android:textColor="#c5000000"

@@ -22,6 +22,11 @@ import com.kingtvarshin.oasis2016new.Adapter.Eventcatogary_cardAdapter;
 import com.kingtvarshin.oasis2016new.Eventtabs.Art;
 import com.kingtvarshin.oasis2016new.Eventtabs.Dance;
 import com.kingtvarshin.oasis2016new.Eventtabs.Drama;
+import com.kingtvarshin.oasis2016new.Eventtabs.Misc;
+import com.kingtvarshin.oasis2016new.Eventtabs.Music;
+import com.kingtvarshin.oasis2016new.Eventtabs.Online;
+import com.kingtvarshin.oasis2016new.Eventtabs.Oratory;
+import com.kingtvarshin.oasis2016new.Eventtabs.Quizzing;
 import com.kingtvarshin.oasis2016new.R;
 
 import java.util.ArrayList;
@@ -106,42 +111,49 @@ public class Frament_events extends Fragment {
                             ft.replace(R.id.content_frame, new Drama());
                             ft.commit();
                         }
+                        break;
                         case 2:
                         {
                             final FragmentTransaction ft = getFragmentManager().beginTransaction();
-                            ft.replace(R.id.content_frame, new Dance());
+                            ft.replace(R.id.content_frame, new Music());
                             ft.commit();
                         }
+                        break;
                         case 3:
                         {
                             final FragmentTransaction ft = getFragmentManager().beginTransaction();
-                            ft.replace(R.id.content_frame, new Dance());
+                            ft.replace(R.id.content_frame, new Online());
                             ft.commit();
                         }
+                        break;
                         case 4:
                         {
                             final FragmentTransaction ft = getFragmentManager().beginTransaction();
-                            ft.replace(R.id.content_frame, new Dance());
+                            ft.replace(R.id.content_frame, new Quizzing());
                             ft.commit();
                         }
+                        break;
                         case 5:
                         {
                             final FragmentTransaction ft = getFragmentManager().beginTransaction();
-                            ft.replace(R.id.content_frame, new Dance());
+                            ft.replace(R.id.content_frame, new Misc());
                             ft.commit();
                         }
+                        break;
                         case 6:
                         {
                             final FragmentTransaction ft = getFragmentManager().beginTransaction();
-                            ft.replace(R.id.content_frame, new Dance());
+                            ft.replace(R.id.content_frame, new Oratory());
                             ft.commit();
                         }
+                        break;
                         case 7:
                         {
                             final FragmentTransaction ft = getFragmentManager().beginTransaction();
-                            ft.replace(R.id.content_frame, new Dance());
+                            ft.replace(R.id.content_frame, new Art());
                             ft.commit();
                         }
+                        break;
                     }
                 }
 

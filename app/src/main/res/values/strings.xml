@@ -24,6 +24,8 @@ Sacrifices were but prayers to the gods, and there was no gesture nobler than of
     <string name="sponsors">Sponsors</string>
     <string name="contact_us">Contact Us</string>
     <string name="developers">Developers</string>
+    <string name="title">title</string>
+    <string name="text">text</string>
 
     <string-array name="tab1">
         <item>Event1</item>

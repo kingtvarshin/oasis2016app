@@ -35,7 +35,7 @@ public class Developers_cardAdapter extends RecyclerView.Adapter<Developers_card
 
         viewHolder.tv_name.setText(name.get(i));
         viewHolder.tv_work.setText(work.get(i));
-        viewHolder.card.setAlpha(.8f);
+        viewHolder.card.setAlpha(.6f);
 //        if(i<=4){
 //        viewHolder.card.setCardBackgroundColor(Color.BLUE);}
 //        else if(i>=5)

@@ -35,6 +35,7 @@ public class Event_cardAdapter extends RecyclerView.Adapter<Event_cardAdapter.Vi
 
         viewHolder.tv_Eventtitle.setText(eventtitle.get(i));
         viewHolder.tv_Eventdesc.setText(eventdesc.get(i));
+        viewHolder.card.setAlpha(.6f);
 //        if(i<=4){
 //        viewHolder.card.setCardBackgroundColor(Color.BLUE);}
 //        else if(i>=5)

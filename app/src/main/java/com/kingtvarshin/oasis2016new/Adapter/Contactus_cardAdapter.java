@@ -41,6 +41,7 @@ public class Contactus_cardAdapter extends RecyclerView.Adapter<Contactus_cardAd
         viewHolder.tv_post.setText(post.get(i));
         viewHolder.tv_mail.setText(mail.get(i));
         viewHolder.tv_number.setText(number.get(i));
+        viewHolder.card.setAlpha(.6f);
 //        if(i<=4){
 //        viewHolder.card.setCardBackgroundColor(Color.BLUE);}
 //        else if(i>=5)

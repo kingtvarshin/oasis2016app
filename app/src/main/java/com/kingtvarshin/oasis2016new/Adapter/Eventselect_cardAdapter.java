@@ -23,13 +23,11 @@ public class Eventselect_cardAdapter extends RecyclerView.Adapter<Eventselect_ca
 
 
     private ArrayList<String> eventid;
-    private ArrayList<String> catogarycolor;
     private ArrayList<String> eventcatogary;
     private ArrayList<String> eventname;
 
-    public Eventselect_cardAdapter(ArrayList<String> catogarycolor,ArrayList<String> eventid,ArrayList<String> eventcatogary, ArrayList<String> eventname) {
+    public Eventselect_cardAdapter(ArrayList<String> eventid,ArrayList<String> eventcatogary, ArrayList<String> eventname) {
         this.eventid = eventid;
-        this.catogarycolor = catogarycolor;
         this.eventcatogary = eventcatogary;
         this.eventname = eventname;
     }
@@ -45,7 +43,6 @@ public class Eventselect_cardAdapter extends RecyclerView.Adapter<Eventselect_ca
 
         viewHolder.tv_Eventcatogary.setText(eventcatogary.get(i));
         viewHolder.tv_Eventname.setText(eventname.get(i));
-//        viewHolder.card.setCardBackgroundColor(Color.catogarycolor.get(i));
         viewHolder.tv_Eventname.setOnCheckedChangeListener(
                 new CompoundButton.OnCheckedChangeListener() {
                     @Override
@@ -60,10 +57,10 @@ public class Eventselect_cardAdapter extends RecyclerView.Adapter<Eventselect_ca
                     }
                 }
         );
-//        if(i<=4){
-//        viewHolder.card.setCardBackgroundColor(Color.BLUE);}
-//        else if(i>=5)
-//            viewHolder.card.setCardBackgroundColor(Color.RED);
+        if(i<=4){
+            viewHolder.card.setCardBackgroundColor(Color.BLUE);}
+        else if(i>=5)
+            viewHolder.card.setCardBackgroundColor(Color.RED);
     }
 
     @Override
