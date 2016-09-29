@@ -30,7 +30,7 @@ public class Frament_about extends Fragment {
 
         card = (CardView)rootView.findViewById(R.id.card);
         t1 = (TextView)rootView.findViewById(R.id.textViewabout);
-        card.setAlpha(.4f);
+        card.setAlpha(.6f);
 
         tf1 = Typeface.createFromAsset(getContext().getAssets(),"fonts/RobotoReguler.ttf");
 
