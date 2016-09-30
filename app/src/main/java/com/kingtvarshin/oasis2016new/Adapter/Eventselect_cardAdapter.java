@@ -21,7 +21,7 @@ import java.util.ArrayList;
 public class Eventselect_cardAdapter extends RecyclerView.Adapter<Eventselect_cardAdapter.ViewHolder> {
 
 
-
+    public ArrayList<String> selectedStrings = new ArrayList<String>();
     private ArrayList<String> eventid;
     private ArrayList<String> eventcatogary;
     private ArrayList<String> eventname;
@@ -47,12 +47,10 @@ public class Eventselect_cardAdapter extends RecyclerView.Adapter<Eventselect_ca
                 new CompoundButton.OnCheckedChangeListener() {
                     @Override
                     public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                        if(b){
-                            //write code to save in string array
-                        }
-                        else
-                        {
-                            //do as u wish
+                        if (b) {
+                            selectedStrings.add(eventname.toString());
+                        }else{
+                            selectedStrings.remove(eventname.toString());
                         }
                     }
                 }
