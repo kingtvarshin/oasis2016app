@@ -42,7 +42,9 @@
             android:scrollbars="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#1fffffff" />
+            android:background="#1fffffff"
+            android:layout_gravity="bottom"
+            android:paddingTop="10dp" />
     </LinearLayout>
 
 </LinearLayout>
