@@ -29,6 +29,7 @@ import com.kingtvarshin.oasis2016new.fragments.Frament_intro;
 import com.kingtvarshin.oasis2016new.fragments.Frament_payment;
 import com.kingtvarshin.oasis2016new.fragments.Frament_register;
 import com.kingtvarshin.oasis2016new.fragments.Frament_registered_events;
+import com.kingtvarshin.oasis2016new.fragments.Frament_schedule;
 import com.kingtvarshin.oasis2016new.fragments.Frament_sponsors;
 
 public class MainActivity extends AppCompatActivity
@@ -130,6 +131,10 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_events) {
             setTitle("Events");
             fragment = new Frament_events();
+            fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
+        } else if (id == R.id.nav_schedule) {
+            setTitle("Schedule");
+            fragment = new Frament_schedule();
             fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
         } else if (id == R.id.nav_register) {
             setTitle("Register");

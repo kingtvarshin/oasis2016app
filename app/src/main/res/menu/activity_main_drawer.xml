@@ -12,6 +12,10 @@
             android:icon="@drawable/events"
             android:title="@string/events" />
         <item
+            android:id="@+id/nav_schedule"
+            android:icon="@drawable/events"
+            android:title="@string/schedule" />
+        <item
             android:id="@+id/nav_register"
             android:icon="@drawable/register"
             android:title="@string/register" />
