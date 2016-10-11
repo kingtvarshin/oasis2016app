@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <group android:checkableBehavior="single">
 
@@ -16,6 +17,22 @@
             android:icon="@drawable/events"
             android:title="@string/schedule" />
         <item
+            android:id="@+id/nav_profshows"
+            android:icon="@drawable/events"
+            android:title="Prof. Shows" />
+        <item
+            android:id="@+id/nav_updates"
+            android:icon="@drawable/events"
+            android:title="Updates" />
+        <item
+            android:id="@+id/nav_eventsnow"
+            android:icon="@drawable/events"
+            android:title="Events Now" />
+
+        <item android:id="@+id/nav_knowyourid"
+            android:icon="@drawable/events"
+            android:title="Know Your ID"/>
+        <item
             android:id="@+id/nav_register"
             android:icon="@drawable/register"
             android:title="@string/register" />
@@ -31,6 +48,10 @@
             android:id="@+id/nav_blog"
             android:icon="@drawable/ic_menu_camera"
             android:title="@string/blog" />
+        <item
+            android:id="@+id/nav_picoftheday"
+            android:icon="@drawable/events"
+            android:title="Pics of the Day" />
         <item
             android:id="@+id/nav_map"
             android:icon="@drawable/map"

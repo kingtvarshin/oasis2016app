@@ -20,7 +20,7 @@ import com.kingtvarshin.oasis2016new.R;
 /**
  * Created by lenovo on 14-09-2016.
  */
-public class Frament_blog extends Fragment {
+public class Fragment_blog extends Fragment {
 
     ProgressBar loading;
 
@@ -45,7 +45,7 @@ public class Frament_blog extends Fragment {
         ws.setAppCachePath(getActivity().getCacheDir().getAbsolutePath());
         ws.setAppCacheEnabled(true);
 
-        web.setWebViewClient(new Frament_blog.mwebViewClient());
+        web.setWebViewClient(new Fragment_blog.mwebViewClient());
 
         if(!isNetworkAvailable())
         {

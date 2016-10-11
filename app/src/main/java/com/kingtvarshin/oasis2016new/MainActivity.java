@@ -1,6 +1,5 @@
 package com.kingtvarshin.oasis2016new;
 
-import android.app.FragmentManager;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -8,7 +7,6 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -19,18 +17,23 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.kingtvarshin.oasis2016new.fragments.Frament_about;
-import com.kingtvarshin.oasis2016new.fragments.Frament_contactus;
-import com.kingtvarshin.oasis2016new.fragments.Frament_developers;
-import com.kingtvarshin.oasis2016new.fragments.Frament_events;
-import com.kingtvarshin.oasis2016new.fragments.Frament_blog;
-import com.kingtvarshin.oasis2016new.fragments.Frament_howtoreach;
-import com.kingtvarshin.oasis2016new.fragments.Frament_intro;
-import com.kingtvarshin.oasis2016new.fragments.Frament_payment;
-import com.kingtvarshin.oasis2016new.fragments.Frament_register;
-import com.kingtvarshin.oasis2016new.fragments.Frament_registered_events;
-import com.kingtvarshin.oasis2016new.fragments.Frament_schedule;
-import com.kingtvarshin.oasis2016new.fragments.Frament_sponsors;
+import com.kingtvarshin.oasis2016new.fragments.Fragment_blog;
+import com.kingtvarshin.oasis2016new.fragments.Fragment_contactus;
+import com.kingtvarshin.oasis2016new.fragments.Fragment_developers;
+import com.kingtvarshin.oasis2016new.fragments.Fragment_events;
+import com.kingtvarshin.oasis2016new.fragments.Fragment_eventsnow;
+import com.kingtvarshin.oasis2016new.fragments.Fragment_howtoreach;
+import com.kingtvarshin.oasis2016new.fragments.Fragment_knowyourid;
+import com.kingtvarshin.oasis2016new.fragments.Fragment_payment;
+import com.kingtvarshin.oasis2016new.fragments.Fragment_picsoftheday;
+import com.kingtvarshin.oasis2016new.fragments.Fragment_profshows;
+import com.kingtvarshin.oasis2016new.fragments.Fragment_about;
+import com.kingtvarshin.oasis2016new.fragments.Fragment_intro;
+import com.kingtvarshin.oasis2016new.fragments.Fragment_register;
+import com.kingtvarshin.oasis2016new.fragments.Fragment_registered_events;
+import com.kingtvarshin.oasis2016new.fragments.Fragment_schedule;
+import com.kingtvarshin.oasis2016new.fragments.Fragment_sponsors;
+import com.kingtvarshin.oasis2016new.fragments.Fragment_updates;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener , OnMapReadyCallback {
@@ -48,7 +51,7 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        fragment = new Frament_intro();
+        fragment = new Fragment_intro();
 
         android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
@@ -100,7 +103,7 @@ public class MainActivity extends AppCompatActivity
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_search) {
             setTitle("Register");
-            fragment = new Frament_register();
+            fragment = new Fragment_register();
 
             android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
             fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
@@ -126,31 +129,51 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_about) {
             setTitle("About");
-            fragment = new Frament_about();
+            fragment = new Fragment_about();
             fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
         } else if (id == R.id.nav_events) {
             setTitle("Events");
-            fragment = new Frament_events();
+            fragment = new Fragment_events();
             fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
         } else if (id == R.id.nav_schedule) {
             setTitle("Schedule");
-            fragment = new Frament_schedule();
+            fragment = new Fragment_schedule();
+            fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
+        } else if (id == R.id.nav_profshows) {
+            setTitle("Prof. Shows");
+            fragment = new Fragment_profshows();
+            fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
+        } else if (id == R.id.nav_updates) {
+            setTitle("Updates");
+            fragment = new Fragment_updates();
+            fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
+        } else if (id == R.id.nav_eventsnow) {
+            setTitle("Events Now");
+            fragment = new Fragment_eventsnow();
+            fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
+        } else if (id == R.id.nav_knowyourid) {
+            setTitle("Know your Id");
+            fragment = new Fragment_knowyourid();
             fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
         } else if (id == R.id.nav_register) {
             setTitle("Register");
-            fragment = new Frament_register();
+            fragment = new Fragment_register();
             fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
         } else if (id == R.id.nav_payment) {
             setTitle("Payment");
-            fragment = new Frament_payment();
+            fragment = new Fragment_payment();
             fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
         } else if (id == R.id.nav_registeredevents) {
             setTitle("Your Events");
-            fragment = new Frament_registered_events();
+            fragment = new Fragment_registered_events();
             fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
         } else if (id == R.id.nav_blog) {
             setTitle("Blog");
-            fragment = new Frament_blog();
+            fragment = new Fragment_blog();
+            fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
+        } else if (id == R.id.nav_picoftheday) {
+            setTitle("Pics of the day");
+            fragment = new Fragment_picsoftheday();
             fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
         } else if (id == R.id.nav_map) {
             setTitle("Map");
@@ -160,19 +183,19 @@ public class MainActivity extends AppCompatActivity
                 sFm.beginTransaction().show(sMapFragment).commit();
             }}  else if (id == R.id.nav_sponsors) {
             setTitle("Sponsors");
-            fragment = new Frament_sponsors();
+            fragment = new Fragment_sponsors();
             fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
         } else if (id == R.id.nav_howtoreach) {
             setTitle("How To Reach");
-            fragment = new Frament_howtoreach();
+            fragment = new Fragment_howtoreach();
             fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
         } else if (id == R.id.nav_contactus) {
             setTitle("Contact Us");
-            fragment = new Frament_contactus();
+            fragment = new Fragment_contactus();
             fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
         } else if (id == R.id.nav_developers) {
             setTitle("Developer");
-            fragment = new Frament_developers();
+            fragment = new Fragment_developers();
             fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
         }
 

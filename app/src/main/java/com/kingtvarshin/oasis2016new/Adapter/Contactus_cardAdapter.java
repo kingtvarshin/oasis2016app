@@ -5,11 +5,15 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
 import com.kingtvarshin.oasis2016new.R;
 
 import java.util.ArrayList;
+
+import static com.kingtvarshin.oasis2016new.R.id.card;
 
 /**
  * Created by lenovo on 05-09-2016.
@@ -20,6 +24,7 @@ public class Contactus_cardAdapter extends RecyclerView.Adapter<Contactus_cardAd
     private ArrayList<String> post;
     private ArrayList<String> mail;
     private ArrayList<String> number;
+    private int lastPosition=-1;
 
     public Contactus_cardAdapter(ArrayList<String> name, ArrayList<String> post, ArrayList<String> mail, ArrayList<String> number) {
         this.name = name;
@@ -42,6 +47,7 @@ public class Contactus_cardAdapter extends RecyclerView.Adapter<Contactus_cardAd
         viewHolder.tv_mail.setText(mail.get(i));
         viewHolder.tv_number.setText(number.get(i));
         viewHolder.card.setAlpha(.6f);
+        setAnimation(viewHolder.card, i);
 //        if(i<=4){
 //        viewHolder.card.setCardBackgroundColor(Color.BLUE);}
 //        else if(i>=5)
@@ -69,6 +75,34 @@ public class Contactus_cardAdapter extends RecyclerView.Adapter<Contactus_cardAd
 
             card = (CardView)view.findViewById(R.id.card);
         }
+
+        public void clearAnimation() {
+            this.clearAnimation();
+        }
     }
+
+    private void setAnimation(View viewToAnimate, int position)
+    {
+        // If the bound view wasn't previously displayed on screen, it's animated
+
+        if (position > lastPosition)
+        {
+
+            Animation animation = AnimationUtils.loadAnimation(viewToAnimate.getContext(), (position > lastPosition) ? R.anim.slide_in_left : R.anim.slide_in_left);
+            viewToAnimate.startAnimation(animation);
+            lastPosition = position;
+        }
+
+
+
+    }
+    //to solve the problem of fast scroll
+    @Override
+    public void onViewDetachedFromWindow(ViewHolder holder) {
+        super.onViewDetachedFromWindow(holder);
+        ((ViewHolder)holder).clearAnimation();
+    }
+
+
 
 }

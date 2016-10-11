@@ -32,7 +32,7 @@ import java.util.Map;
 /**
  * Created by lenovo on 14-09-2016.
  */
-public class Frament_registered_events extends Fragment {
+public class Fragment_registered_events extends Fragment {
 
     RecyclerView recyclerView;
     private Button button_send_push;

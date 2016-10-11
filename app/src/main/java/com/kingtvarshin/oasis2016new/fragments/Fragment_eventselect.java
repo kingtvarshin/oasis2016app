@@ -37,7 +37,7 @@ import java.util.Map;
  * Created by lenovo on 14-09-2016.
  *
  */
-public class Frament_eventselect extends Fragment {
+public class Fragment_eventselect extends Fragment {
 
     private ArrayList<String> eventid = new ArrayList<String>();
     private ArrayList<String> eventcatogary = new ArrayList<String>();

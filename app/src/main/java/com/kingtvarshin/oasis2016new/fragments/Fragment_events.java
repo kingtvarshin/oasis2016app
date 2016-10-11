@@ -34,7 +34,7 @@ import java.util.ArrayList;
 /**
  * Created by lenovo on 14-09-2016.
  */
-public class Frament_events extends Fragment {
+public class Fragment_events extends Fragment {
 
 //    ImageButton revolveImage;
 

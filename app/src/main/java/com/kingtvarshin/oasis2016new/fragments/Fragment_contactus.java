@@ -23,7 +23,7 @@ import java.util.ArrayList;
 /**
  * Created by lenovo on 14-09-2016.
  */
-public class Frament_contactus extends Fragment {
+public class Fragment_contactus extends Fragment {
 
     private ArrayList<String> name;
     private ArrayList<String> post;

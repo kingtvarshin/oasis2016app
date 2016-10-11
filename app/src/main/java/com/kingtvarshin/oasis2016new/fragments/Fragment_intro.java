@@ -14,7 +14,7 @@ import com.kingtvarshin.oasis2016new.R;
 /**
  * Created by lenovo on 14-09-2016.
  */
-public class Frament_intro extends Fragment {
+public class Fragment_intro extends Fragment {
 
     Button register,skip;
 
@@ -32,7 +32,7 @@ public class Frament_intro extends Fragment {
                     @Override
                     public void onClick(View view) {
                         final FragmentTransaction ft = getFragmentManager().beginTransaction();
-                        ft.replace(R.id.content_frame, new Frament_register());
+                        ft.replace(R.id.content_frame, new Fragment_register());
                         ft.commit();
                         //write code here
                     }
@@ -44,7 +44,7 @@ public class Frament_intro extends Fragment {
                     @Override
                     public void onClick(View view) {
                         final FragmentTransaction ft = getFragmentManager().beginTransaction();
-                        ft.replace(R.id.content_frame, new Frament_about());
+                        ft.replace(R.id.content_frame, new Fragment_about());
                         ft.commit();
                         //write your code here
                     }

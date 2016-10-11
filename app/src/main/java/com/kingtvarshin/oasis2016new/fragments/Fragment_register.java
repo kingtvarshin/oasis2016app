@@ -1,26 +1,20 @@
 package com.kingtvarshin.oasis2016new.fragments;
 
-import android.app.Dialog;
-import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageButton;
 
 import com.kingtvarshin.oasis2016new.R;
-
-import java.util.ArrayList;
 
 /**
  * Created by lenovo on 14-09-2016.
  */
-public class Frament_register extends Fragment {
+public class Fragment_register extends Fragment {
 
 //    ImageButton ib1;
     Button selectevent;
@@ -84,7 +78,7 @@ public class Frament_register extends Fragment {
                     @Override
                     public void onClick(View view) {
                         final FragmentTransaction ft = getFragmentManager().beginTransaction();
-                        ft.replace(R.id.content_frame, new Frament_eventselect());
+                        ft.replace(R.id.content_frame, new Fragment_eventselect());
                         ft.commit();
                     }
                 }

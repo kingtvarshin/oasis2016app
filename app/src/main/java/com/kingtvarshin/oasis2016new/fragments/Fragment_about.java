@@ -15,7 +15,7 @@ import com.kingtvarshin.oasis2016new.R;
 /**
  * Created by lenovo on 14-09-2016.
  */
-public class Frament_about extends Fragment {
+public class Fragment_about extends Fragment {
 
     Typeface tf1;
     TextView t1;
