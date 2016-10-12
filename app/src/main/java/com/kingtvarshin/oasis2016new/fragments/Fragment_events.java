@@ -1,5 +1,6 @@
 package com.kingtvarshin.oasis2016new.fragments;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -40,6 +41,7 @@ public class Fragment_events extends Fragment {
 
     private ArrayList<String> eventcatogary;
     private ArrayList<String> eventicon;
+    private Context context;
 
     @Nullable
     @Override
@@ -75,7 +77,7 @@ public class Fragment_events extends Fragment {
         eventicon.add("http://i.imgur.com/QYq9lh5.jpg");
         eventicon.add("http://i.imgur.com/QYq9lh5.jpg");
 
-        RecyclerView.Adapter adapter = new Eventcatogary_cardAdapter(eventcatogary,eventicon);
+        RecyclerView.Adapter adapter = new Eventcatogary_cardAdapter(getContext(),eventcatogary,eventicon);
         recyclerView.setAdapter(adapter);
 
         recyclerView.addOnItemTouchListener(new RecyclerView.OnItemTouchListener() {

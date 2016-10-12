@@ -9,44 +9,42 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.FrameLayout;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.kingtvarshin.oasis2016new.R;
-import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
-
-import static com.kingtvarshin.oasis2016new.R.id.card;
 
 /**
  * Created by lenovo on 05-09-2016.
  */
-public class Eventcatogary_cardAdapter extends RecyclerView.Adapter<Eventcatogary_cardAdapter.ViewHolder> {
+public class Schedule_cardAdapter extends RecyclerView.Adapter<Schedule_cardAdapter.ViewHolder> {
 
-    private ArrayList<String> eventcatogary;
-    private ArrayList<String> eventicon;
+    private ArrayList<String> eventname;
+    private ArrayList<String> time;
+    private ArrayList<String> location;
     private int lastPosition=-1;
     private Context mContext;
 
-    public Eventcatogary_cardAdapter(Context context,ArrayList<String> eventcatogary, ArrayList<String> eventicon) {
+    public Schedule_cardAdapter(Context context, ArrayList<String> eventname, ArrayList<String> time, ArrayList<String> location) {
         this.mContext = context;
-        this.eventcatogary = eventcatogary;
-        this.eventicon = eventicon;
+        this.eventname = eventname;
+        this.time = time;
+        this.location = location;
     }
 
     @Override
-    public Eventcatogary_cardAdapter.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.card_eventoption, viewGroup, false);
+    public Schedule_cardAdapter.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
+        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.card_schedule, viewGroup, false);
         return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(Eventcatogary_cardAdapter.ViewHolder viewHolder, int i) {
+    public void onBindViewHolder(Schedule_cardAdapter.ViewHolder viewHolder, int i) {
 
-        viewHolder.tv_Eventcatogary.setText(eventcatogary.get(i));
-//        viewHolder.tv_Eventicon.setText(eventicon.get(i));
-        Picasso.with(viewHolder.tv_Eventicon.getContext()).load(eventicon.get(i)).into(viewHolder.tv_Eventicon);
+        viewHolder.tv_eventname.setText(eventname.get(i));
+        viewHolder.tv_time.setText(time.get(i));
+        viewHolder.tv_location.setText(location.get(i));
         viewHolder.card.setAlpha(.6f);
         setAnimation(viewHolder.card, i);
 //        if(i<=4){
@@ -62,18 +60,20 @@ public class Eventcatogary_cardAdapter extends RecyclerView.Adapter<Eventcatogar
 
     @Override
     public int getItemCount() {
-        return eventcatogary.size();
+        return eventname.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
-        private TextView tv_Eventcatogary;
-        private ImageView tv_Eventicon;
+        private TextView tv_eventname;
+        private TextView tv_time;
+        private TextView tv_location;
         CardView card;
         public ViewHolder(View view) {
             super(view);
 
-            tv_Eventcatogary = (TextView)view.findViewById(R.id.textVieweventcatogary);
-            tv_Eventicon = (ImageView) view.findViewById(R.id.imageView2);
+            tv_eventname = (TextView)view.findViewById(R.id.namesc);
+            tv_time = (TextView)view.findViewById(R.id.timesc);
+            tv_location = (TextView) view.findViewById(R.id.locsc);
 
             card = (CardView)view.findViewById(R.id.card);
         }
