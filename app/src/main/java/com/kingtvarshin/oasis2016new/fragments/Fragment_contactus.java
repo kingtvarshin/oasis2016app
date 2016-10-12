@@ -1,5 +1,6 @@
 package com.kingtvarshin.oasis2016new.fragments;
 
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -29,6 +30,8 @@ public class Fragment_contactus extends Fragment {
     private ArrayList<String> post;
     private ArrayList<String> mail;
     private ArrayList<String> number;
+    private Context context;
+
 
     @Nullable
     @Override
@@ -80,7 +83,7 @@ public class Fragment_contactus extends Fragment {
         number.add("+91-8504004462");
         number.add("+91-8504001914");
 
-        RecyclerView.Adapter adapter = new Contactus_cardAdapter(name,post,mail,number);
+        RecyclerView.Adapter adapter = new Contactus_cardAdapter(getContext(),name,post,mail,number);
         recyclerView.setAdapter(adapter);
 
         recyclerView.addOnItemTouchListener(new RecyclerView.OnItemTouchListener() {

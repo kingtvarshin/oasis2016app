@@ -1,5 +1,6 @@
 package com.kingtvarshin.oasis2016new.Adapter;
 
+import android.content.Context;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -7,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import com.kingtvarshin.oasis2016new.R;
@@ -25,8 +27,10 @@ public class Contactus_cardAdapter extends RecyclerView.Adapter<Contactus_cardAd
     private ArrayList<String> mail;
     private ArrayList<String> number;
     private int lastPosition=-1;
+    private Context mContext;
 
-    public Contactus_cardAdapter(ArrayList<String> name, ArrayList<String> post, ArrayList<String> mail, ArrayList<String> number) {
+    public Contactus_cardAdapter(Context context,ArrayList<String> name, ArrayList<String> post, ArrayList<String> mail, ArrayList<String> number) {
+        this.mContext = context;
         this.name = name;
         this.post = post;
         this.mail = mail;
@@ -48,10 +52,17 @@ public class Contactus_cardAdapter extends RecyclerView.Adapter<Contactus_cardAd
         viewHolder.tv_number.setText(number.get(i));
         viewHolder.card.setAlpha(.6f);
         setAnimation(viewHolder.card, i);
+//        setAnimation(viewHolder.card, i);
 //        if(i<=4){
 //        viewHolder.card.setCardBackgroundColor(Color.BLUE);}
 //        else if(i>=5)
 //            viewHolder.card.setCardBackgroundColor(Color.RED);
+    }
+
+
+    private void setAnimation(FrameLayout container, int position) {
+        Animation animation = AnimationUtils.loadAnimation(mContext, android.R.anim.fade_in);
+        container.startAnimation(animation);
     }
 
     @Override
@@ -76,32 +87,32 @@ public class Contactus_cardAdapter extends RecyclerView.Adapter<Contactus_cardAd
             card = (CardView)view.findViewById(R.id.card);
         }
 
-        public void clearAnimation() {
-            this.clearAnimation();
-        }
+//        public void clearAnimation() {
+//            this.clearAnimation();
+//        }
     }
 
-    private void setAnimation(View viewToAnimate, int position)
-    {
-        // If the bound view wasn't previously displayed on screen, it's animated
-
-        if (position > lastPosition)
-        {
-
-            Animation animation = AnimationUtils.loadAnimation(viewToAnimate.getContext(), (position > lastPosition) ? R.anim.slide_in_left : R.anim.slide_in_left);
-            viewToAnimate.startAnimation(animation);
-            lastPosition = position;
-        }
-
-
-
-    }
-    //to solve the problem of fast scroll
-    @Override
-    public void onViewDetachedFromWindow(ViewHolder holder) {
-        super.onViewDetachedFromWindow(holder);
-        ((ViewHolder)holder).clearAnimation();
-    }
+//    private void setAnimation(View viewToAnimate, int position)
+//    {
+//        // If the bound view wasn't previously displayed on screen, it's animated
+//
+//        if (position > lastPosition)
+//        {
+//
+//            Animation animation = AnimationUtils.loadAnimation(viewToAnimate.getContext(), R.anim.home_fade);
+//            viewToAnimate.startAnimation(animation);
+//            lastPosition = position;
+//        }
+//
+//
+//
+//    }
+//    //to solve the problem of fast scroll
+//    @Override
+//    public void onViewDetachedFromWindow(ViewHolder holder) {
+//        super.onViewDetachedFromWindow(holder);
+//        ((ViewHolder)holder).clearAnimation();
+//    }
 
 
 
