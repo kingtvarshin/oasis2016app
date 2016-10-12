@@ -1,5 +1,6 @@
 package com.kingtvarshin.oasis2016new.fragments;
 
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -28,6 +29,7 @@ public class Fragment_developers extends Fragment {
     private ArrayList<String> name;
     private ArrayList<String> work;
     private ArrayList<String> number;
+    private Context context;
 
     @Nullable
     @Override
@@ -55,7 +57,7 @@ public class Fragment_developers extends Fragment {
         number.add("+91-7240105044");
         number.add("+91-8826248944");
 
-        RecyclerView.Adapter adapter = new Developers_cardAdapter(name,work);
+        RecyclerView.Adapter adapter = new Developers_cardAdapter(getContext(),name,work);
         recyclerView.setAdapter(adapter);
 
         recyclerView.addOnItemTouchListener(new RecyclerView.OnItemTouchListener() {
