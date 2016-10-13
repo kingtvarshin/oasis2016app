@@ -1,11 +1,10 @@
 package com.kingtvarshin.oasis2016new.tabs;
 
 import android.content.Context;
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.GestureDetector;
@@ -15,21 +14,22 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.kingtvarshin.oasis2016new.Adapter.Developers_cardAdapter;
 import com.kingtvarshin.oasis2016new.Adapter.Schedule_cardAdapter;
 import com.kingtvarshin.oasis2016new.R;
+import com.kingtvarshin.oasis2016new.fragments.Fragment_about;
+import com.kingtvarshin.oasis2016new.fragments.Fragment_sponsors;
 
 import java.util.ArrayList;
 
-/**
- * Created by lenovo on 11-10-2016.
- */
+import static android.R.attr.fragment;
 
 public class Tab_19 extends Fragment {
 
+    android.support.v4.app.Fragment fragment = null;
     private ArrayList<String> eventname;
     private ArrayList<String> time;
     private ArrayList<String> location;
+    private ArrayList<String> desc;
     private Context context;
 
     @Nullable
@@ -51,12 +51,16 @@ public class Tab_19 extends Fragment {
         eventname.add("Aditya Raj Agarwal");
 
         time = new ArrayList<>();
-        time.add("Registration and Other Enquiries");
-        time.add("Registration and Other Enquiries");
+        time.add("8:00 PM");
+        time.add("9:00 PM");
 
         location = new ArrayList<>();
         location.add("+91-7240105044");
         location.add("+91-8826248944");
+
+        desc = new ArrayList<>();
+        desc.add("+91-7240105044");
+        desc.add("+91-8826248944");
 
         RecyclerView.Adapter adapter = new Schedule_cardAdapter(getContext(),eventname,time,location);
         recyclerView.setAdapter(adapter);
@@ -72,16 +76,27 @@ public class Tab_19 extends Fragment {
             });
 
             @Override
-            public boolean onInterceptTouchEvent(RecyclerView rv, MotionEvent e) {
+            public boolean onInterceptTouchEvent(RecyclerView rv, MotionEvent e)
+            {
+
 
                 View child = rv.findChildViewUnder(e.getX(), e.getY());
-                if (child != null && gestureDetector.onTouchEvent(e)) {
+                if (child != null && gestureDetector.onTouchEvent(e))
+                {
                     int position = rv.getChildAdapterPosition(child);
+                    getActivity().setTitle(eventname.get(position));
+                    android.support.v4.app.FragmentManager fragmentManager = getChildFragmentManager();
+                    fragment = new Tabeventonclick();
+                    fragmentManager.beginTransaction().setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).commit();
+                    fragmentManager.beginTransaction().replace(R.id.pager, fragment).commit();
+
+
+
 //                    dialContactPhone(number.get(position));
                     Toast.makeText(getContext(), eventname.get(position), Toast.LENGTH_SHORT).show();
                 }
 
-                return false;
+                return true;
             }
 
             @Override

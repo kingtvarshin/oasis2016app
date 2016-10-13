@@ -16,7 +16,6 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.kingtvarshin.oasis2016new.Adapter.Contactus_cardAdapter;
-import com.kingtvarshin.oasis2016new.Adapter.Event_cardAdapter;
 import com.kingtvarshin.oasis2016new.R;
 
 import java.util.ArrayList;

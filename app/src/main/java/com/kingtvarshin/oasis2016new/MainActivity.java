@@ -2,6 +2,7 @@ package com.kingtvarshin.oasis2016new;
 
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -130,50 +131,62 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_about) {
             setTitle("About");
             fragment = new Fragment_about();
+            fragmentManager.beginTransaction().setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).commit();
             fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
         } else if (id == R.id.nav_events) {
             setTitle("Events");
             fragment = new Fragment_events();
+            fragmentManager.beginTransaction().setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).commit();
             fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
         } else if (id == R.id.nav_schedule) {
             setTitle("Schedule");
             fragment = new Fragment_schedule();
+            fragmentManager.beginTransaction().setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).commit();
             fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
         } else if (id == R.id.nav_profshows) {
             setTitle("Prof. Shows");
             fragment = new Fragment_profshows();
+            fragmentManager.beginTransaction().setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).commit();
             fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
         } else if (id == R.id.nav_updates) {
             setTitle("Updates");
             fragment = new Fragment_updates();
+            fragmentManager.beginTransaction().setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).commit();
             fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
         } else if (id == R.id.nav_eventsnow) {
             setTitle("Events Now");
             fragment = new Fragment_eventsnow();
+            fragmentManager.beginTransaction().setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).commit();
             fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
         } else if (id == R.id.nav_knowyourid) {
             setTitle("Know your Id");
             fragment = new Fragment_knowyourid();
+            fragmentManager.beginTransaction().setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).commit();
             fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
         } else if (id == R.id.nav_register) {
             setTitle("Register");
             fragment = new Fragment_register();
+            fragmentManager.beginTransaction().setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).commit();
             fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
         } else if (id == R.id.nav_payment) {
             setTitle("Payment");
             fragment = new Fragment_payment();
+            fragmentManager.beginTransaction().setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).commit();
             fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
         } else if (id == R.id.nav_registeredevents) {
             setTitle("Your Events");
             fragment = new Fragment_registered_events();
+            fragmentManager.beginTransaction().setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).commit();
             fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
         } else if (id == R.id.nav_blog) {
             setTitle("Blog");
             fragment = new Fragment_blog();
+            fragmentManager.beginTransaction().setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).commit();
             fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
         } else if (id == R.id.nav_picoftheday) {
             setTitle("Pics of the day");
             fragment = new Fragment_picsoftheday();
+            fragmentManager.beginTransaction().setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).commit();
             fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
         } else if (id == R.id.nav_map) {
             setTitle("Map");
@@ -184,18 +197,22 @@ public class MainActivity extends AppCompatActivity
             }}  else if (id == R.id.nav_sponsors) {
             setTitle("Sponsors");
             fragment = new Fragment_sponsors();
+            fragmentManager.beginTransaction().setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).commit();
             fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
         } else if (id == R.id.nav_howtoreach) {
             setTitle("How To Reach");
             fragment = new Fragment_howtoreach();
+            fragmentManager.beginTransaction().setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).commit();
             fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
         } else if (id == R.id.nav_contactus) {
             setTitle("Contact Us");
             fragment = new Fragment_contactus();
+            fragmentManager.beginTransaction().setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).commit();
             fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
         } else if (id == R.id.nav_developers) {
             setTitle("Developer");
             fragment = new Fragment_developers();
+            fragmentManager.beginTransaction().setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).commit();
             fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
         }
 
