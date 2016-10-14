@@ -27,6 +27,8 @@
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
             android:value="AIzaSyB4CkCXB_Vav8lAKfp6241Fa6sI-GBTk-o" />
+
+        <activity android:name=".Profshowdetail"/>
     </application>
 
 </manifest>

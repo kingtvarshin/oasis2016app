@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 import com.kingtvarshin.oasis2016new.Adapter.Developers_cardAdapter;
 import com.kingtvarshin.oasis2016new.Adapter.Profshow_cardAdapter;
+import com.kingtvarshin.oasis2016new.Profshowdetail;
 import com.kingtvarshin.oasis2016new.R;
 
 import java.util.ArrayList;
@@ -29,6 +30,10 @@ public class Fragment_profshows extends Fragment {
 
     private ArrayList<String> profshowname;
     private ArrayList<String> profshowimgurl;
+    private ArrayList<String> profshowlocation;
+    private ArrayList<String> profshowtime;
+    private ArrayList<String> profshowdesc;
+    private ArrayList<String> profshowdate;
     private Context context;
 
     @Nullable
@@ -46,12 +51,28 @@ public class Fragment_profshows extends Fragment {
         recyclerView.setLayoutManager(layoutManager);
 
         profshowname = new ArrayList<>();
-        profshowname.add("Vikrant Singh");
-        profshowname.add("Aditya Raj Agarwal");
+        profshowname.add("Amit Trivedi");
+        profshowname.add("Bla Bla Bla");
 
         profshowimgurl = new ArrayList<>();
         profshowimgurl.add("http://i.imgur.com/QYq9lh5.jpg");
         profshowimgurl.add("http://i.imgur.com/QYq9lh5.jpg");
+
+        profshowlocation = new ArrayList<>();
+        profshowlocation.add("Audi");
+        profshowlocation.add("Gym G");
+
+        profshowtime = new ArrayList<>();
+        profshowtime.add("8:00 pm");
+        profshowtime.add("9:00 pm");
+
+        profshowdesc = new ArrayList<>();
+        profshowdesc.add("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+        profshowdesc.add("dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd");
+
+        profshowdate = new ArrayList<>();
+        profshowdate.add("14-10-2016");
+        profshowdate.add("14-10-2016");
 
         RecyclerView.Adapter adapter = new Profshow_cardAdapter(getContext(),profshowname,profshowimgurl);
         recyclerView.setAdapter(adapter);
@@ -72,6 +93,7 @@ public class Fragment_profshows extends Fragment {
                 View child = rv.findChildViewUnder(e.getX(), e.getY());
                 if (child != null && gestureDetector.onTouchEvent(e)) {
                     int position = rv.getChildAdapterPosition(child);
+                    profDetails(position);
                     Toast.makeText(getContext(), profshowname.get(position), Toast.LENGTH_SHORT).show();
                 }
 
@@ -90,6 +112,19 @@ public class Fragment_profshows extends Fragment {
         });
 
         return rootView;
+    }
+
+    public void profDetails(int profNum)
+    {
+        Intent i=new Intent(getActivity(),Profshowdetail.class);
+        i.putExtra("profNum",profNum);
+        i.putExtra("name",profshowname.get(profNum));
+        i.putExtra("location",profshowlocation.get(profNum));
+        i.putExtra("Image",profshowimgurl.get(profNum));
+        i.putExtra("time",profshowtime.get(profNum));
+        i.putExtra("desc",profshowdesc.get(profNum));
+        i.putExtra("date",profshowdate.get(profNum));
+        startActivity(i);
     }
 
 }
