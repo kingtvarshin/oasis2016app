@@ -42,7 +42,7 @@ public class Developers_cardAdapter extends RecyclerView.Adapter<Developers_card
 
         viewHolder.tv_name.setText(name.get(i));
         viewHolder.tv_work.setText(work.get(i));
-        viewHolder.card.setAlpha(.6f);
+//        viewHolder.card.setAlpha(.3f);
         setAnimation(viewHolder.card, i);
 //        if(i<=4){
 //        viewHolder.card.setCardBackgroundColor(Color.BLUE);}
@@ -51,7 +51,7 @@ public class Developers_cardAdapter extends RecyclerView.Adapter<Developers_card
     }
 
     private void setAnimation(FrameLayout container, int position) {
-        Animation animation = AnimationUtils.loadAnimation(mContext, android.R.anim.fade_in);
+        Animation animation = AnimationUtils.loadAnimation(mContext, R.anim.home_fade);
         container.startAnimation(animation);
     }
 

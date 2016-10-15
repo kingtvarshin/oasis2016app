@@ -10,8 +10,8 @@
     android:layout_marginLeft="5dp"
     android:layout_marginRight="5dp"
     android:layout_marginBottom="5dp"
-    card_view:cardCornerRadius="8dp"
-    android:background="#00ffffff"
+    card_view:cardCornerRadius="6dp"
+    card_view:cardBackgroundColor="#363636"
     android:elevation="5dp">
 
     <LinearLayout
@@ -35,8 +35,7 @@
             android:text="name"
             android:id="@+id/nametv"
             android:layout_gravity="center_horizontal"
-            android:textColor="#000000"
-            tools:textColor="#000000" />
+            android:textColor="#dcdcdc" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -45,10 +44,10 @@
             android:text="post"
             android:id="@+id/posttv"
             android:padding="5dp"
-            android:textColor="#000000"
+            android:textColor="#b5b5b5"
             android:textAlignment="center"
             android:textSize="18dp"
-            tools:textColor="#000000" />
+            />
 
         <TextView
             android:layout_width="wrap_content"
@@ -57,8 +56,7 @@
             android:text="mail"
             android:id="@+id/mailtv"
             android:layout_gravity="center_horizontal"
-            android:textColor="#000000"
-            tools:textColor="#000000" />
+            android:textColor="#a4a4a4"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -67,8 +65,7 @@
             android:text="number"
             android:id="@+id/numbertv"
             android:layout_gravity="center_horizontal"
-            android:textColor="#000000"
-            tools:textColor="#000000" />
+            android:textColor="#9d9d9d"/>
 
     </LinearLayout>
 

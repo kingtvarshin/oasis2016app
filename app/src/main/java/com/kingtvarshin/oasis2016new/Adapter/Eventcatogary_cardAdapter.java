@@ -47,7 +47,7 @@ public class Eventcatogary_cardAdapter extends RecyclerView.Adapter<Eventcatogar
         viewHolder.tv_Eventcatogary.setText(eventcatogary.get(i));
 //        viewHolder.tv_Eventicon.setText(eventicon.get(i));
         Picasso.with(viewHolder.tv_Eventicon.getContext()).load(eventicon.get(i)).into(viewHolder.tv_Eventicon);
-        viewHolder.card.setAlpha(.6f);
+//        viewHolder.card.setAlpha(.3f);
         setAnimation(viewHolder.card, i);
 //        if(i<=4){
 //        viewHolder.card.setCardBackgroundColor(Color.BLUE);}

@@ -3,7 +3,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bgglow">
+    android:background="#000000">
     <LinearLayout
         android:layout_width="fill_parent"
         android:orientation="vertical"
@@ -13,8 +13,7 @@
             android:id="@+id/card_recycler_view_eventcatogary"
             android:scrollbars="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#1fffffff" />
+            android:layout_height="match_parent" />
 
     </LinearLayout>
 

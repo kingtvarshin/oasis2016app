@@ -1,10 +1,14 @@
 package com.kingtvarshin.oasis2016new.Adapter;
 
+import android.content.Context;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import com.kingtvarshin.oasis2016new.R;
@@ -18,8 +22,10 @@ public class Event_cardAdapter extends RecyclerView.Adapter<Event_cardAdapter.Vi
 
     private ArrayList<String> eventtitle;
     private ArrayList<String> eventdesc;
+    private Context mContext;
 
-    public Event_cardAdapter(ArrayList<String> eventtitle, ArrayList<String> eventdesc) {
+    public Event_cardAdapter(Context context,ArrayList<String> eventtitle, ArrayList<String> eventdesc) {
+        this.mContext = context;
         this.eventtitle = eventtitle;
         this.eventdesc = eventdesc;
     }
@@ -35,11 +41,17 @@ public class Event_cardAdapter extends RecyclerView.Adapter<Event_cardAdapter.Vi
 
         viewHolder.tv_Eventtitle.setText(eventtitle.get(i));
         viewHolder.tv_Eventdesc.setText(eventdesc.get(i));
-        viewHolder.card.setAlpha(.6f);
+        setAnimation(viewHolder.card, i);
+//        viewHolder.card.setAlpha(.3f);
 //        if(i<=4){
 //        viewHolder.card.setCardBackgroundColor(Color.BLUE);}
 //        else if(i>=5)
 //            viewHolder.card.setCardBackgroundColor(Color.RED);
+    }
+
+    private void setAnimation(FrameLayout container, int position) {
+        Animation animation = AnimationUtils.loadAnimation(mContext, R.anim.home_fade);
+        container.startAnimation(animation);
     }
 
     @Override

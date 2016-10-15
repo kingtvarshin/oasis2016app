@@ -1,5 +1,6 @@
 package com.kingtvarshin.oasis2016new.Eventtabs;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -29,6 +30,7 @@ public class Online extends Fragment {
 
     public ArrayList<String> eventtitle;
     private ArrayList<String> eventdesc;
+    private Context context;
     Firebase mRef, mRef2;
 
     @Override
@@ -102,7 +104,7 @@ public class Online extends Fragment {
 //        eventdesc.add("Razzmatazz*");
 
 
-        final RecyclerView.Adapter adapter = new Event_cardAdapter(eventtitle, eventdesc);
+        final RecyclerView.Adapter adapter = new Event_cardAdapter(getContext(),eventtitle, eventdesc);
         recyclerView.setAdapter(adapter);
 
 

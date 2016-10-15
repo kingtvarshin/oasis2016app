@@ -10,8 +10,8 @@
     android:layout_marginLeft="5dp"
     android:layout_marginRight="5dp"
     android:layout_marginBottom="5dp"
-    card_view:cardCornerRadius="8dp"
-    android:background="#00f3f3f3"
+    card_view:cardCornerRadius="6dp"
+    card_view:cardBackgroundColor="#363636"
     android:elevation="5dp">
 
     <RelativeLayout
@@ -34,7 +34,7 @@
             android:text="time"
             android:id="@+id/timesc"
             android:layout_gravity="center_horizontal"
-            android:textColor="#000000"
+            android:textColor="#9d9d9d"
             android:layout_alignBaseline="@+id/namesc"
             android:layout_alignBottom="@+id/namesc"
             android:layout_alignParentRight="true"
@@ -48,7 +48,7 @@
             android:text="location"
             android:id="@+id/locsc"
             android:layout_gravity="center_horizontal"
-            android:textColor="#000000"
+            android:textColor="#9d9d9d"
             android:maxWidth="200dp"
             android:layout_below="@+id/namesc"
             android:layout_alignParentLeft="true"
@@ -63,7 +63,7 @@
             android:text="name"
             android:id="@+id/namesc"
             android:layout_gravity="center_horizontal"
-            android:textColor="#000000"
+            android:textColor="#dcdcdc"
             android:maxWidth="200dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"

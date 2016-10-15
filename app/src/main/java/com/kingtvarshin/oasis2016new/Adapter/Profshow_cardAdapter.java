@@ -43,7 +43,7 @@ public class Profshow_cardAdapter extends RecyclerView.Adapter<Profshow_cardAdap
     public void onBindViewHolder(Profshow_cardAdapter.ViewHolder viewHolder, int i) {
 
         viewHolder.tv_profshowname.setText(profshowname.get(i));
-        viewHolder.card.setAlpha(.6f);
+//        viewHolder.card.setAlpha(.3f);
         Picasso.with(viewHolder.tv_profshowimgurl.getContext()).load(profshowimgurl.get(i)).into(viewHolder.tv_profshowimgurl);
         setAnimation(viewHolder.card, i);
 //        if(i<=4){

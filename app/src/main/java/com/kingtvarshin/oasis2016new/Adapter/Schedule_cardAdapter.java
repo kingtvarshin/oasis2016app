@@ -45,7 +45,7 @@ public class Schedule_cardAdapter extends RecyclerView.Adapter<Schedule_cardAdap
         viewHolder.tv_eventname.setText(eventname.get(i));
         viewHolder.tv_time.setText(time.get(i));
         viewHolder.tv_location.setText(location.get(i));
-        viewHolder.card.setAlpha(.6f);
+//        viewHolder.card.setAlpha(.3f);
         setAnimation(viewHolder.card, i);
 //        if(i<=4){
 //        viewHolder.card.setCardBackgroundColor(Color.BLUE);}

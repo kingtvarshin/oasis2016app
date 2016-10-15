@@ -50,7 +50,7 @@ public class Contactus_cardAdapter extends RecyclerView.Adapter<Contactus_cardAd
         viewHolder.tv_post.setText(post.get(i));
         viewHolder.tv_mail.setText(mail.get(i));
         viewHolder.tv_number.setText(number.get(i));
-        viewHolder.card.setAlpha(.6f);
+//        viewHolder.card.setAlpha(.3f);
         setAnimation(viewHolder.card, i);
 //        setAnimation(viewHolder.card, i);
 //        if(i<=4){
@@ -61,7 +61,7 @@ public class Contactus_cardAdapter extends RecyclerView.Adapter<Contactus_cardAd
 
 
     private void setAnimation(FrameLayout container, int position) {
-        Animation animation = AnimationUtils.loadAnimation(mContext, android.R.anim.fade_in);
+        Animation animation = AnimationUtils.loadAnimation(mContext, R.anim.home_fade);
         container.startAnimation(animation);
     }
 
