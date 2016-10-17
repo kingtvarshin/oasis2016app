@@ -19,7 +19,6 @@ public class Fragment_about extends Fragment {
 
     Typeface tf1;
     TextView t1;
-    CardView card;
 
     @Nullable
     @Override
@@ -28,9 +27,7 @@ public class Fragment_about extends Fragment {
 
         View rootView = inflater.inflate(R.layout.fragment_about, container, false);
 
-        card = (CardView)rootView.findViewById(R.id.card);
         t1 = (TextView)rootView.findViewById(R.id.textViewabout);
-        card.setAlpha(.3f);
 
         tf1 = Typeface.createFromAsset(getContext().getAssets(),"fonts/RobotoReguler.ttf");
 

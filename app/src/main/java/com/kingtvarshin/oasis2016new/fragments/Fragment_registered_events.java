@@ -27,6 +27,7 @@ import com.kingtvarshin.oasis2016new.R;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.StringTokenizer;
 
 /**
  * Created by lenovo on 14-09-2016.
@@ -126,7 +127,12 @@ public class Fragment_registered_events extends Fragment {
                     @Override
                     public void onResponse(String response) {
 //                        if(response.toString()!="[\"Invalid Email\"]"){
-                        arrayList.add(response.toString());
+                        String stringResponse = response;
+                        StringTokenizer stringTokenizer = new StringTokenizer(stringResponse, ",");
+                        while (stringTokenizer.hasMoreTokens()) {
+                            arrayList.add(stringTokenizer.nextToken());
+                            adapter.notifyDataSetChanged();
+                        }
                         Toast.makeText(getActivity(),response.toString(), Toast.LENGTH_LONG).show();
                         Log.v("arraylist after tap : ", arrayList.toString());
 

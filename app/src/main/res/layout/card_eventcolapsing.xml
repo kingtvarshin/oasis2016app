@@ -25,33 +25,6 @@
         android:layout_marginBottom="8dp">
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="name"
-            android:id="@+id/eventnametf"
-            android:layout_gravity="center_horizontal"
-            android:textColor="#dcdcdc"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="location"
-            android:id="@+id/locationtf"
-            android:padding="5dp"
-            android:textColor="#9d9d9d"
-            android:textAlignment="center"
-            android:textSize="18dp"
-            android:layout_marginTop="48dp"
-            android:layout_below="@+id/nametf"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
-
-        <TextView
             android:text="time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -74,6 +47,31 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/locationtf"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="location"
+            android:id="@+id/locationtf"
+            android:padding="5dp"
+            android:textColor="#9d9d9d"
+            android:textAlignment="center"
+            android:textSize="18dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:text="date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/timetf"
+            android:layout_alignRight="@+id/timetf"
+            android:layout_alignEnd="@+id/timetf"
+            android:id="@+id/datetf"
+            android:textColor="#9d9d9d"
+            />
 
     </RelativeLayout>
 

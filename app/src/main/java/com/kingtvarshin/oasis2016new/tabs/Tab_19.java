@@ -87,9 +87,10 @@ public class Tab_19 extends Fragment {
                 if (child != null && gestureDetector.onTouchEvent(e))
                 {
                     int position = rv.getChildAdapterPosition(child);
-                    getActivity().setTitle(eventname.get(position));
+//                    getActivity().setTitle(eventname.get(position));
                     Intent i=new Intent(getActivity(),Eventonclick.class);
                     i.putExtra("eventtitle",eventname.get(position));
+                    i.addFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
                     startActivity(i);
 
 //                    dialContactPhone(number.get(position));
