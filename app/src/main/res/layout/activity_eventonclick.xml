@@ -17,7 +17,7 @@
             android:orientation="vertical"
             android:paddingTop="10dp">
 
-            <include layout="@layout/card_developer" />
+            <include layout="@layout/card_eventcolapsing" />
 
         </LinearLayout>
 

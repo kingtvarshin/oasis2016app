@@ -53,7 +53,7 @@ public class Fragment_blog extends Fragment {
             return view;
         }
 
-        web.loadUrl("http://bits-oasis.org/sponsors/");
+        web.loadUrl("http://bits-oasis.org/press/");
 
 
         return view;

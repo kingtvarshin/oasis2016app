@@ -19,6 +19,9 @@ public class Eventonclick extends AppCompatActivity {
 
     private CollapsingToolbarLayout ctbl = null;
     String myParam;
+    TextView location;
+    TextView time;
+    TextView description;
     TextView name;
 
     @Override
@@ -55,8 +58,17 @@ public class Eventonclick extends AppCompatActivity {
         }
     });
 
-        name = (TextView)findViewById(R.id.nametf);
+        name = (TextView)findViewById(R.id.eventnametf);
+        location = (TextView)findViewById(R.id.locationtf);
+        time = (TextView)findViewById(R.id.timetf);
+        description = (TextView)findViewById(R.id.descripstiontf);
         name.setText("blablabla");
+        location.setText("Gym Grounds");
+        time.setText("8:00 PM");
+        description.setText("blablablablablablablablablablablablablablablablablablablablabla" +
+                "blablablablablablablablablablablablablablablablablablablablablablablablablablabla" +
+                "blablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla" +
+                "blablablablablablablablablablablablablablablablablablablablablablablabla");
 
 }
 
