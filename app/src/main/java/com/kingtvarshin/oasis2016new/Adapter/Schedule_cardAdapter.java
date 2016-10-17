@@ -54,7 +54,7 @@ public class Schedule_cardAdapter extends RecyclerView.Adapter<Schedule_cardAdap
     }
 
     private void setAnimation(FrameLayout container, int position) {
-        Animation animation = AnimationUtils.loadAnimation(mContext, android.R.anim.fade_in);
+        Animation animation = AnimationUtils.loadAnimation(mContext, R.anim.home_fade);
         container.startAnimation(animation);
     }
 

@@ -9,52 +9,56 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.graphics.Palette;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.TextView;
 
 /**
- * Created by lenovo on 14-10-2016.
+ * Created by lenovo on 17-10-2016.
  */
 
-public class Profshowdetail extends AppCompatActivity {
+public class Eventonclick extends AppCompatActivity {
 
     private CollapsingToolbarLayout ctbl = null;
     String myParam;
+    TextView name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profshowdetail);
+        setContentView(R.layout.activity_eventonclick);
 
-        Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar2);
-        setSupportActionBar(toolbar);
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(true);
+    Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar2);
+    setSupportActionBar(toolbar);
+    ActionBar actionBar = getSupportActionBar();
+    actionBar.setDisplayHomeAsUpEnabled(true);
 
-        Bundle extras = getIntent().getExtras();
-        if (extras != null)
-        {
-            myParam = extras.getString("name");
-        }
-        else
-        {
-            //..oops!
-        }
+    Bundle extras = getIntent().getExtras();
+    if (extras != null) {
+        myParam = extras.getString("eventtitle");
+
+    } else {
+        //..oops!
+    }
 
 
-        ctbl = (CollapsingToolbarLayout)findViewById(R.id.collapsing_toolbar);
-        ctbl.setTitle(myParam);
+    ctbl = (CollapsingToolbarLayout)findViewById(R.id.collapsing_toolbar);
+    setTitle(myParam);
+
 
 //        dynamicToolbarColor();
 
-        toolbarTextAppearnce();
+    toolbarTextAppearnce();
 
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();//What to do on back clicked
-            }
-        });
+    toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            finish();//What to do on back clicked
+        }
+    });
 
-    }
+        name = (TextView)findViewById(R.id.nametf);
+        name.setText("blablabla");
+
+}
 
     private void dynamicToolbarColor() {
 

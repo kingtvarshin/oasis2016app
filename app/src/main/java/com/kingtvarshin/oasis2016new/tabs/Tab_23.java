@@ -1,6 +1,7 @@
 package com.kingtvarshin.oasis2016new.tabs;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -14,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.kingtvarshin.oasis2016new.Adapter.Schedule_cardAdapter;
+import com.kingtvarshin.oasis2016new.Eventonclick;
 import com.kingtvarshin.oasis2016new.R;
 
 import java.util.ArrayList;
@@ -79,12 +81,9 @@ public class Tab_23 extends Fragment {
                 View child = rv.findChildViewUnder(e.getX(), e.getY());
                 if (child != null && gestureDetector.onTouchEvent(e)) {
                     int position = rv.getChildAdapterPosition(child);
-//                    Intent in01 = new Intent(getContext(), Tabeventonclick.class);
-//                    in01.putExtra("name", eventname.get(position));
-//                    in01.putExtra("time", time.get(position));
-//                    in01.putExtra("location", location.get(position));
-//                    in01.putExtra("desc", desc.get(position));
-//                    startActivity(in01);
+                    Intent i=new Intent(getActivity(),Eventonclick.class);
+                    i.putExtra("eventtitle",eventname.get(position));
+                    startActivity(i);
                     Toast.makeText(getContext(), eventname.get(position), Toast.LENGTH_SHORT).show();
                 }
 

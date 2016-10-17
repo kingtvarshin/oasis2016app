@@ -21,13 +21,15 @@ import java.util.ArrayList;
 public class Event_cardAdapter extends RecyclerView.Adapter<Event_cardAdapter.ViewHolder> {
 
     private ArrayList<String> eventtitle;
-    private ArrayList<String> eventdesc;
+    private ArrayList<String> eventtime;
+    private ArrayList<String> eventlocation;
     private Context mContext;
 
-    public Event_cardAdapter(Context context,ArrayList<String> eventtitle, ArrayList<String> eventdesc) {
+    public Event_cardAdapter(Context context,ArrayList<String> eventtitle, ArrayList<String> eventtime, ArrayList<String> eventlocation) {
         this.mContext = context;
         this.eventtitle = eventtitle;
-        this.eventdesc = eventdesc;
+        this.eventtime = eventtime;
+        this.eventlocation = eventlocation;
     }
 
     @Override
@@ -40,7 +42,8 @@ public class Event_cardAdapter extends RecyclerView.Adapter<Event_cardAdapter.Vi
     public void onBindViewHolder(Event_cardAdapter.ViewHolder viewHolder, int i) {
 
         viewHolder.tv_Eventtitle.setText(eventtitle.get(i));
-        viewHolder.tv_Eventdesc.setText(eventdesc.get(i));
+        viewHolder.tv_Eventtime.setText(eventtime.get(i));
+        viewHolder.tv_Eventlocation.setText(eventlocation.get(i));
         setAnimation(viewHolder.card, i);
 //        viewHolder.card.setAlpha(.3f);
 //        if(i<=4){
@@ -61,13 +64,15 @@ public class Event_cardAdapter extends RecyclerView.Adapter<Event_cardAdapter.Vi
 
     public class ViewHolder extends RecyclerView.ViewHolder{
         private TextView tv_Eventtitle;
-        private TextView tv_Eventdesc;
+        private TextView tv_Eventtime;
+        private TextView tv_Eventlocation;
         CardView card;
         public ViewHolder(View view) {
             super(view);
 
-            tv_Eventtitle = (TextView)view.findViewById(R.id.textViewevent);
-            tv_Eventdesc = (TextView) view.findViewById(R.id.textViewdesc);
+            tv_Eventtitle = (TextView)view.findViewById(R.id.textVieweventname);
+            tv_Eventtime = (TextView) view.findViewById(R.id.textVieweventtime);
+            tv_Eventlocation = (TextView) view.findViewById(R.id.textViewlocation);
 
             card = (CardView)view.findViewById(R.id.card);
         }

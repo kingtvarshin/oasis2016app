@@ -1,6 +1,7 @@
 package com.kingtvarshin.oasis2016new.fragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -15,14 +16,8 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.kingtvarshin.oasis2016new.Adapter.Eventcatogary_cardAdapter;
-import com.kingtvarshin.oasis2016new.Eventtabs.Art;
-import com.kingtvarshin.oasis2016new.Eventtabs.Dance;
-import com.kingtvarshin.oasis2016new.Eventtabs.Drama;
-import com.kingtvarshin.oasis2016new.Eventtabs.Misc;
-import com.kingtvarshin.oasis2016new.Eventtabs.Music;
-import com.kingtvarshin.oasis2016new.Eventtabs.Online;
-import com.kingtvarshin.oasis2016new.Eventtabs.Oratory;
-import com.kingtvarshin.oasis2016new.Eventtabs.Quizzing;
+import com.kingtvarshin.oasis2016new.Eventcategoryonclick;
+import com.kingtvarshin.oasis2016new.Profshowdetail;
 import com.kingtvarshin.oasis2016new.R;
 
 import java.util.ArrayList;
@@ -96,59 +91,58 @@ public class Fragment_events extends Fragment {
                     switch(position){
                         case 0:
                         {
-                            getActivity().setTitle("Dance");
-                            final FragmentTransaction ft = getFragmentManager().beginTransaction();
-                            ft.replace(R.id.content_frame, new Dance());
-                            ft.commit();
+                            Intent i=new Intent(getActivity(),Eventcategoryonclick.class);
+                            i.putExtra("eventcatogary",eventcatogary.get(0));
+                            startActivity(i);
                         }
                         break;
                         case 1:
                         {
-                            final FragmentTransaction ft = getFragmentManager().beginTransaction();
-                            ft.replace(R.id.content_frame, new Drama());
-                            ft.commit();
+                            Intent i=new Intent(getActivity(),Eventcategoryonclick.class);
+                            i.putExtra("eventcatogary",eventcatogary.get(1));
+                            startActivity(i);
                         }
                         break;
                         case 2:
                         {
-                            final FragmentTransaction ft = getFragmentManager().beginTransaction();
-                            ft.replace(R.id.content_frame, new Music());
-                            ft.commit();
+                            Intent i=new Intent(getActivity(),Eventcategoryonclick.class);
+                            i.putExtra("eventcatogary",eventcatogary.get(2));
+                            startActivity(i);
                         }
                         break;
                         case 3:
                         {
-                            final FragmentTransaction ft = getFragmentManager().beginTransaction();
-                            ft.replace(R.id.content_frame, new Online());
-                            ft.commit();
+                            Intent i=new Intent(getActivity(),Eventcategoryonclick.class);
+                            i.putExtra("eventcatogary",eventcatogary.get(3));
+                            startActivity(i);
                         }
                         break;
                         case 4:
                         {
-                            final FragmentTransaction ft = getFragmentManager().beginTransaction();
-                            ft.replace(R.id.content_frame, new Quizzing());
-                            ft.commit();
+                            Intent i=new Intent(getActivity(),Eventcategoryonclick.class);
+                            i.putExtra("eventcatogary",eventcatogary.get(4));
+                            startActivity(i);
                         }
                         break;
                         case 5:
                         {
-                            final FragmentTransaction ft = getFragmentManager().beginTransaction();
-                            ft.replace(R.id.content_frame, new Misc());
-                            ft.commit();
+                            Intent i=new Intent(getActivity(),Eventcategoryonclick.class);
+                            i.putExtra("eventcatogary",eventcatogary.get(5));
+                            startActivity(i);
                         }
                         break;
                         case 6:
                         {
-                            final FragmentTransaction ft = getFragmentManager().beginTransaction();
-                            ft.replace(R.id.content_frame, new Oratory());
-                            ft.commit();
+                            Intent i=new Intent(getActivity(),Eventcategoryonclick.class);
+                            i.putExtra("eventcatogary",eventcatogary.get(6));
+                            startActivity(i);
                         }
                         break;
                         case 7:
                         {
-                            final FragmentTransaction ft = getFragmentManager().beginTransaction();
-                            ft.replace(R.id.content_frame, new Art());
-                            ft.commit();
+                            Intent i=new Intent(getActivity(),Eventcategoryonclick.class);
+                            i.putExtra("eventcatogary",eventcatogary.get(7));
+                            startActivity(i);
                         }
                         break;
                     }

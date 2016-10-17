@@ -56,7 +56,7 @@ public class Eventcatogary_cardAdapter extends RecyclerView.Adapter<Eventcatogar
     }
 
     private void setAnimation(FrameLayout container, int position) {
-        Animation animation = AnimationUtils.loadAnimation(mContext, android.R.anim.fade_in);
+        Animation animation = AnimationUtils.loadAnimation(mContext, R.anim.home_fade);
         container.startAnimation(animation);
     }
 

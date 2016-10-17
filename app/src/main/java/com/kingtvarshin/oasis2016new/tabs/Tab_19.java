@@ -1,6 +1,7 @@
 package com.kingtvarshin.oasis2016new.tabs;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -15,6 +16,8 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.kingtvarshin.oasis2016new.Adapter.Schedule_cardAdapter;
+import com.kingtvarshin.oasis2016new.Eventcategoryonclick;
+import com.kingtvarshin.oasis2016new.Eventonclick;
 import com.kingtvarshin.oasis2016new.R;
 import com.kingtvarshin.oasis2016new.fragments.Fragment_about;
 import com.kingtvarshin.oasis2016new.fragments.Fragment_sponsors;
@@ -85,12 +88,9 @@ public class Tab_19 extends Fragment {
                 {
                     int position = rv.getChildAdapterPosition(child);
                     getActivity().setTitle(eventname.get(position));
-                    android.support.v4.app.FragmentManager fragmentManager = getChildFragmentManager();
-                    fragment = new Tabeventonclick();
-                    fragmentManager.beginTransaction().setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).commit();
-                    fragmentManager.beginTransaction().replace(R.id.pager, fragment).commit();
-
-
+                    Intent i=new Intent(getActivity(),Eventonclick.class);
+                    i.putExtra("eventtitle",eventname.get(position));
+                    startActivity(i);
 
 //                    dialContactPhone(number.get(position));
                     Toast.makeText(getContext(), eventname.get(position), Toast.LENGTH_SHORT).show();
