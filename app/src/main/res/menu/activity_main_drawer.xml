@@ -29,17 +29,17 @@
             android:icon="@drawable/events"
             android:title="Events Now" />
 
-        <item android:id="@+id/nav_knowyourid"
-            android:icon="@drawable/events"
-            android:title="Know Your ID"/>
-        <item
-            android:id="@+id/nav_register"
-            android:icon="@drawable/register"
-            android:title="@string/register" />
-        <item
-            android:id="@+id/nav_payment"
-            android:icon="@drawable/creditcard"
-            android:title="@string/payment" />
+        <!--<item android:id="@+id/nav_knowyourid"-->
+            <!--android:icon="@drawable/events"-->
+            <!--android:title="Know Your ID"/>-->
+        <!--<item-->
+            <!--android:id="@+id/nav_register"-->
+            <!--android:icon="@drawable/register"-->
+            <!--android:title="@string/register" />-->
+        <!--<item-->
+            <!--android:id="@+id/nav_payment"-->
+            <!--android:icon="@drawable/creditcard"-->
+            <!--android:title="@string/payment" />-->
         <item
             android:id="@+id/nav_registeredevents"
             android:icon="@drawable/ic_menu_gallery"
@@ -48,10 +48,10 @@
             android:id="@+id/nav_blog"
             android:icon="@drawable/blog"
             android:title="@string/blog" />
-        <item
-            android:id="@+id/nav_picoftheday"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Pics of the Day" />
+        <!--<item-->
+            <!--android:id="@+id/nav_picoftheday"-->
+            <!--android:icon="@drawable/ic_menu_camera"-->
+            <!--android:title="Pics of the Day" />-->
         <item
             android:id="@+id/nav_map"
             android:icon="@drawable/map"

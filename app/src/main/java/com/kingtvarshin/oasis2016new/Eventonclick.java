@@ -199,7 +199,7 @@ public class Eventonclick extends AppCompatActivity {
             description.setText(result.get(0).getContent());
             location.setText(result.get(0).getLocation());
             time.setText(result.get(0).getTime());
-            date.setText(result.get(0).getDate());
+            date.setText("Date: "+result.get(0).getDate()+" Oct");
         }
     }
 

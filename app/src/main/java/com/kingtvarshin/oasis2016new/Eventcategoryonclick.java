@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -54,6 +55,9 @@ public class Eventcategoryonclick extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar3);
         setSupportActionBar(toolbar);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeAsUpIndicator(android.R.drawable.ic_media_previous);
         Bundle extras = getIntent().getExtras();
         if (extras != null)
         {
@@ -136,6 +140,13 @@ public class Eventcategoryonclick extends AppCompatActivity {
             @Override
             public void onRequestDisallowInterceptTouchEvent(boolean disallowIntercept) {
 
+            }
+        });
+
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();//What to do on back clicked
             }
         });
     }

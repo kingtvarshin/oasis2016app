@@ -43,7 +43,7 @@ public class Fragment_events extends Fragment {
 
         recyclerView.setHasFixedSize(true);
 //        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext());
-        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getContext(),2);
+        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getContext(),3);
 //        RecyclerView.LayoutManager layoutManager = new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(layoutManager);
 

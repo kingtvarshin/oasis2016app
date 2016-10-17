@@ -1,15 +1,21 @@
 package com.kingtvarshin.oasis2016new.fragments;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.GestureDetector;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
@@ -19,6 +25,8 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.kingtvarshin.oasis2016new.Adapter.Developers_cardAdapter;
+import com.kingtvarshin.oasis2016new.Adapter.Updates_cardAdapter;
 import com.kingtvarshin.oasis2016new.R;
 
 import java.util.ArrayList;
@@ -32,12 +40,9 @@ import static com.kingtvarshin.oasis2016new.R.id.eventtitle;
 public class Fragment_updates extends Fragment {
 
     private Firebase mRef;
-    private ListView mListView;
 
-    private static final String TAG = "FavoritesActivity";
-
-    //    ListView l4;
     ArrayList<String> updatess = new ArrayList<>();
+    private Context context;
 
     ProgressBar loading;
 
@@ -48,7 +53,50 @@ public class Fragment_updates extends Fragment {
 
         View rootView = inflater.inflate(R.layout.fragment_updates, container, false);
 
-//        l4 = (ListView)rootView.findViewById(R.id.listView4);
+        RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.card_recycler_view_updates);
+
+        recyclerView.setHasFixedSize(true);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext());
+//        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getContext(),3);
+//        RecyclerView.LayoutManager layoutManager = new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL);
+        recyclerView.setLayoutManager(layoutManager);
+
+        final RecyclerView.Adapter adapter = new Updates_cardAdapter(getContext(),updatess);
+        recyclerView.setAdapter(adapter);
+
+        recyclerView.addOnItemTouchListener(new RecyclerView.OnItemTouchListener() {
+            GestureDetector gestureDetector = new GestureDetector(getContext(), new GestureDetector.SimpleOnGestureListener() {
+
+                @Override
+                public boolean onSingleTapUp(MotionEvent e) {
+                    return true;
+                }
+
+            });
+
+            @Override
+            public boolean onInterceptTouchEvent(RecyclerView rv, MotionEvent e) {
+
+                View child = rv.findChildViewUnder(e.getX(), e.getY());
+                if (child != null && gestureDetector.onTouchEvent(e)) {
+                    int position = rv.getChildAdapterPosition(child);
+//                    dialContactPhone(number.get(position));
+                    Toast.makeText(getContext(), updatess.get(position), Toast.LENGTH_SHORT).show();
+                }
+
+                return false;
+            }
+
+            @Override
+            public void onTouchEvent(RecyclerView rv, MotionEvent e) {
+
+            }
+
+            @Override
+            public void onRequestDisallowInterceptTouchEvent(boolean disallowIntercept) {
+
+            }
+        });
 
         Firebase.setAndroidContext(getActivity());
 
@@ -65,7 +113,8 @@ public class Fragment_updates extends Fragment {
             public void onChildAdded(com.firebase.client.DataSnapshot dataSnapshot, String s) {
                 String value = dataSnapshot.getValue(String.class);
                 updatess.add(value);
-                Log.v("Array list", updatess.toString());
+                Log.d("Array list", updatess.toString());
+                adapter.notifyDataSetChanged();
 
                 //TODO put the arraylist "updatess" into an adapter
 
