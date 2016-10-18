@@ -56,8 +56,10 @@ public class Fragment_events extends Fragment {
         eventcatogary.add("Misc");
         eventcatogary.add("Oratory");
         eventcatogary.add("Art");
+        eventcatogary.add("Literature");
 
         eventicon = new ArrayList<>();
+        eventicon.add("http://i.imgur.com/QYq9lh5.jpg");
         eventicon.add("http://i.imgur.com/QYq9lh5.jpg");
         eventicon.add("http://i.imgur.com/QYq9lh5.jpg");
         eventicon.add("http://i.imgur.com/QYq9lh5.jpg");
@@ -142,6 +144,13 @@ public class Fragment_events extends Fragment {
                         {
                             Intent i=new Intent(getActivity(),Eventcategoryonclick.class);
                             i.putExtra("eventcatogary",eventcatogary.get(7));
+                            startActivity(i);
+                        }
+                        break;
+                        case 8:
+                        {
+                            Intent i=new Intent(getActivity(),Eventcategoryonclick.class);
+                            i.putExtra("eventcatogary",eventcatogary.get(8));
                             startActivity(i);
                         }
                         break;

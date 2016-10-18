@@ -2,7 +2,10 @@ package com.kingtvarshin.oasis2016new;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -24,7 +27,9 @@ public class Profshowdetail extends AppCompatActivity {
     Integer img;
     TextView location,time,date,description;
     ImageView iv;
+    Drawable d;
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,6 +62,7 @@ public class Profshowdetail extends AppCompatActivity {
         }
 
 
+
         ctbl = (CollapsingToolbarLayout)findViewById(R.id.collapsing_toolbar);
         ctbl.setTitle(myParam);
 
@@ -75,7 +81,8 @@ public class Profshowdetail extends AppCompatActivity {
         location.setText(loc);
         time.setText(tim);
         date.setText(dat);
-        iv.setImageResource(img);
+//        iv.setImageResource(img);
+        iv.setBackground(getDrawable(img));
 
     }
 
