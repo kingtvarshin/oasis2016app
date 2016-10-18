@@ -23,11 +23,11 @@ import java.util.ArrayList;
 public class Profshow_cardAdapter extends RecyclerView.Adapter<Profshow_cardAdapter.ViewHolder> {
 
     private ArrayList<String> profshowname;
-    private ArrayList<String> profshowimgurl;
+    private ArrayList<Integer> profshowimgurl;
     private int lastPosition=-1;
     private Context mContext;
 
-    public Profshow_cardAdapter(Context context, ArrayList<String> profshowname, ArrayList<String> profshowimgurl) {
+    public Profshow_cardAdapter(Context context, ArrayList<String> profshowname, ArrayList<Integer> profshowimgurl) {
         this.mContext = context;
         this.profshowname = profshowname;
         this.profshowimgurl = profshowimgurl;
@@ -43,8 +43,9 @@ public class Profshow_cardAdapter extends RecyclerView.Adapter<Profshow_cardAdap
     public void onBindViewHolder(Profshow_cardAdapter.ViewHolder viewHolder, int i) {
 
         viewHolder.tv_profshowname.setText(profshowname.get(i));
+        viewHolder.tv_profshowimgurl.setImageResource(profshowimgurl.get(i));
 //        viewHolder.card.setAlpha(.3f);
-        Picasso.with(viewHolder.tv_profshowimgurl.getContext()).load(profshowimgurl.get(i)).into(viewHolder.tv_profshowimgurl);
+//        Picasso.with(viewHolder.tv_profshowimgurl.getContext()).load(profshowimgurl.get(i)).into(viewHolder.tv_profshowimgurl);
         setAnimation(viewHolder.card, i);
 //        if(i<=4){
 //        viewHolder.card.setCardBackgroundColor(Color.BLUE);}

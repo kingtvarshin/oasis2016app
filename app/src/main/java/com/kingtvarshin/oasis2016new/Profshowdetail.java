@@ -9,6 +9,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.graphics.Palette;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 /**
  * Created by lenovo on 14-10-2016.
@@ -18,6 +20,10 @@ public class Profshowdetail extends AppCompatActivity {
 
     private CollapsingToolbarLayout ctbl = null;
     String myParam;
+    String loc,tim,dat,desc;
+    Integer img;
+    TextView location,time,date,description;
+    ImageView iv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,10 +35,21 @@ public class Profshowdetail extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
 
+        location = (TextView)findViewById(R.id.locationtf);
+        time = (TextView)findViewById(R.id.timetf);
+        description = (TextView)findViewById(R.id.descripstiontf);
+        date = (TextView)findViewById(R.id.datetf);
+        iv = (ImageView)findViewById(R.id.collapsing_toolbar_iv);
+
         Bundle extras = getIntent().getExtras();
         if (extras != null)
         {
             myParam = extras.getString("name");
+            loc = extras.getString("location");
+            tim = extras.getString("time");
+            dat = extras.getString("date");
+            desc = extras.getString("desc");
+            img = extras.getInt("Image");
         }
         else
         {
@@ -53,6 +70,12 @@ public class Profshowdetail extends AppCompatActivity {
                 finish();//What to do on back clicked
             }
         });
+
+        description.setText(desc);
+        location.setText(loc);
+        time.setText(tim);
+        date.setText(dat);
+        iv.setImageResource(img);
 
     }
 
