@@ -1,5 +1,6 @@
 package com.kingtvarshin.oasis2016new.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -22,6 +23,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.kingtvarshin.oasis2016new.Adapter.Registeredevents_cardAdapter;
+import com.kingtvarshin.oasis2016new.Eventonclick;
 import com.kingtvarshin.oasis2016new.R;
 
 import java.util.ArrayList;
@@ -98,7 +100,9 @@ public class Fragment_registered_events extends Fragment {
                 View child = rv.findChildViewUnder(e.getX(), e.getY());
                 if (child != null && gestureDetector.onTouchEvent(e)) {
                     int position = rv.getChildAdapterPosition(child);
-//                    dialContactPhone(number.get(position));
+                    Intent i=new Intent(getActivity(),Eventonclick.class);
+                    i.putExtra("eventtitle",arrayList.get(position));
+                    startActivity(i);
                     Toast.makeText(getContext(), arrayList.get(position), Toast.LENGTH_SHORT).show();
                 }
 
