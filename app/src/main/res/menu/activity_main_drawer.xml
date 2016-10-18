@@ -6,27 +6,27 @@
 
         <item
             android:id="@+id/nav_about"
-            android:icon="@drawable/about"
+            android:icon="@drawable/ic_about"
             android:title="@string/about" />
         <item
             android:id="@+id/nav_events"
-            android:icon="@drawable/events"
+            android:icon="@drawable/ic_eventfinal"
             android:title="@string/events" />
         <item
             android:id="@+id/nav_schedule"
-            android:icon="@drawable/events"
+            android:icon="@drawable/ic_schedule"
             android:title="@string/schedule" />
         <item
             android:id="@+id/nav_profshows"
-            android:icon="@drawable/profshow"
+            android:icon="@drawable/ic_profshow"
             android:title="Prof. Shows" />
         <item
             android:id="@+id/nav_updates"
-            android:icon="@drawable/update"
+            android:icon="@drawable/ic_notifications"
             android:title="Updates" />
         <item
             android:id="@+id/nav_eventsnow"
-            android:icon="@drawable/events"
+            android:icon="@drawable/ic_eventsnow"
             android:title="Events Now" />
 
         <!--<item android:id="@+id/nav_knowyourid"-->
@@ -42,11 +42,11 @@
             <!--android:title="@string/payment" />-->
         <item
             android:id="@+id/nav_registeredevents"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/ic_myevents"
             android:title="@string/registered_events" />
         <item
             android:id="@+id/nav_blog"
-            android:icon="@drawable/blog"
+            android:icon="@drawable/ic_blog"
             android:title="@string/blog" />
         <!--<item-->
             <!--android:id="@+id/nav_picoftheday"-->
@@ -54,23 +54,23 @@
             <!--android:title="Pics of the Day" />-->
         <item
             android:id="@+id/nav_map"
-            android:icon="@drawable/map"
+            android:icon="@drawable/ic_mapsfinal"
             android:title="@string/map" />
         <item
             android:id="@+id/nav_howtoreach"
-            android:icon="@drawable/howtoreach"
+            android:icon="@drawable/ic_howfinal"
             android:title="@string/howtoreach" />
         <item
             android:id="@+id/nav_sponsors"
-            android:icon="@drawable/sponsors"
+            android:icon="@drawable/ic_sponsors"
             android:title="@string/sponsors" />
         <item
             android:id="@+id/nav_contactus"
-            android:icon="@drawable/contact"
+            android:icon="@drawable/ic_contactus"
             android:title="@string/contact_us" />
         <item
             android:id="@+id/nav_developers"
-            android:icon="@drawable/developers"
+            android:icon="@drawable/ic_developers"
             android:title="@string/developers" />
 
     </group>

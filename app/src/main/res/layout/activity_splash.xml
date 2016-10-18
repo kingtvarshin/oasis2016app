@@ -8,7 +8,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.kingtvarshin.splashscreen.MainActivity"
-    android:background="@drawable/sky">
+    android:background="#1f1f1f">
 
     <ImageView
         android:layout_width="match_parent"

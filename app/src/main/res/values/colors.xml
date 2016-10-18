@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#232323</color>
+    <color name="colorPrimary">#181818</color>
     <color name="colorPrimaryDark">#020202</color>
-    <color name="colorAccent">#4043ff</color>
-    <color name="custom_dark_grey">#202020</color>
+    <color name="colorAccent">#812244</color>
+    <color name="custom_dark_grey">#8f8f8f</color>
     <color name="custom_white_grey">#A0A0A0</color>
     <color name="custom_middle_grey">#606060</color>
     <color name="custom_teal">#f0f0f0</color>

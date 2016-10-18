@@ -179,7 +179,8 @@ public class Tab_20 extends Fragment {
                             eventModel.setId(finalObject.getInt("id"));
                             eventModel.setKernel(finalObject.getBoolean("is_kernel"));
                             eventModel.setShortDesc(finalObject.getString("short_desc"));
-                            eventModel.setLocation(String.valueOf(finalObject.getBoolean("is_kernel")));
+                            eventModel.setLocation(String.valueOf(finalObject.getString("venue")));
+                            eventModel.setTime(finalObject.getString("time"));
                             eventModel.setDate(String.valueOf(finalObject.getString("date")));
                             Log.v("Event Name", String.valueOf(j) + " - " + eventModel.getEvent() + " - " + eventModel.getDate());
                             eventModelList.add(eventModel);
@@ -214,7 +215,7 @@ public class Tab_20 extends Fragment {
 
             for(int i=0; i<result.size(); i++){
                 eventname.add(result.get(i).getEvent());
-                time.add(result.get(i).getCategory());
+                time.add(result.get(i).getTime());
                 location.add(result.get(i).getLocation());
             }
 

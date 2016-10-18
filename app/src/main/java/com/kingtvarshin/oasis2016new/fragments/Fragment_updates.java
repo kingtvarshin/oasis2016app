@@ -12,26 +12,15 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ListView;
 import android.widget.ProgressBar;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
-import com.firebase.ui.database.FirebaseListAdapter;
-import com.google.firebase.database.ChildEventListener;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.kingtvarshin.oasis2016new.Adapter.Developers_cardAdapter;
 import com.kingtvarshin.oasis2016new.Adapter.Updates_cardAdapter;
 import com.kingtvarshin.oasis2016new.R;
 
 import java.util.ArrayList;
-
-import static com.kingtvarshin.oasis2016new.R.id.eventtitle;
 
 /**
  * Created by lenovo on 11-10-2016.

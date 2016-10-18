@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/contactuslayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:paddingRight="8dp"
+        android:paddingBottom="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_blueline"
+            android:id="@+id/profshowimgurltf"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="name"
+            android:id="@+id/profshownametf"
+            android:textColor="#dcdcdc"
+            android:layout_gravity="center"
+            android:layout_marginLeft="12dp"
+            android:layout_marginStart="12dp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/profshowimgurltf"
+            android:layout_toEndOf="@+id/profshowimgurltf"
+            android:layout_marginTop="22dp" />
+
+        <TextView
+            android:text="date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/profdate"
+            android:layout_alignBottom="@+id/profshowimgurltf"
+            android:layout_alignLeft="@+id/profshownametf"
+            android:layout_alignStart="@+id/profshownametf"
+            android:textColor="#dcdcdc"/>
+
+        <TextView
+            android:text="venue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/profvenue"
+            android:layout_above="@+id/profdate"
+            android:layout_alignLeft="@+id/profdate"
+            android:layout_alignStart="@+id/profdate"
+            android:textColor="#dcdcdc"/>
+
+    </RelativeLayout>
+</RelativeLayout>
